@@ -73,6 +73,11 @@ src/quality/ ──► docs/data_quality.md · data/processed/quality_report.jso
 ```
 
 Full design rationale lives in `docs/architecture.md`.
+## Screenshots
+<img width="1280" height="831" alt="image" src="https://github.com/user-attachments/assets/1202c332-a3b6-4d36-ab2d-9dcbe95c01af" />
+
+
+
 
 ## Data Pipeline
 
