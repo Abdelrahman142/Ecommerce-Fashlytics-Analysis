@@ -1,0 +1,1527 @@
+{
+  "meta": {
+    "input_file": "flipkart_fashion_products_dataset.json",
+    "file_size_bytes": 82720262,
+    "file_size_mb": 82.72,
+    "line_count": 1974388,
+    "profiler": "profile_dataset.py",
+    "json_structure": "top-level array of flat objects; two nested structures (images[], product_details[] of {key:value})"
+  },
+  "records": {
+    "total_records": 30000,
+    "malformed_records": 0,
+    "exact_duplicate_records": 30000,
+    "exact_duplicate_count_vs_total": 0,
+    "distinct_pid": 28080,
+    "distinct_pid_exact": true,
+    "pids_duplicated": 549,
+    "extra_rows_from_pid_dupes": 1920,
+    "distinct_id": 30000,
+    "distinct_id_exact": true,
+    "distinct_url": 30000,
+    "distinct_url_exact": true
+  },
+  "fields": {
+    "_id": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    },
+    "actual_price": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 863,
+      "types": {
+        "str": 30000,
+        "__invalid__": 863
+      }
+    },
+    "average_rating": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 2446,
+      "types": {
+        "str": 30000
+      }
+    },
+    "brand": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 2068,
+      "types": {
+        "str": 30000
+      }
+    },
+    "category": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    },
+    "crawled_at": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    },
+    "description": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 11980,
+      "types": {
+        "str": 30000
+      }
+    },
+    "discount": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 941,
+      "types": {
+        "str": 30000
+      }
+    },
+    "images": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 778,
+      "types": {
+        "list": 30000
+      }
+    },
+    "out_of_stock": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "bool": 30000
+      }
+    },
+    "pid": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    },
+    "product_details": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "list": 30000
+      }
+    },
+    "seller": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 1741,
+      "types": {
+        "str": 30000
+      }
+    },
+    "selling_price": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 2,
+      "types": {
+        "str": 30000,
+        "__invalid__": 2
+      }
+    },
+    "sub_category": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    },
+    "title": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    },
+    "url": {
+      "present": 30000,
+      "missing": 0,
+      "explicit_null": 0,
+      "empty_string_or_list": 0,
+      "types": {
+        "str": 30000
+      }
+    }
+  },
+  "text_lengths": {
+    "title": {
+      "min": 3,
+      "max": 251,
+      "mean": 37.6,
+      "count": 30000
+    },
+    "description": {
+      "min": 0,
+      "max": 3860,
+      "mean": 173.3,
+      "count": 30000
+    }
+  },
+  "images": {
+    "records_with_images": 30000,
+    "images_list_invalid": 0,
+    "len_min": 0,
+    "len_max": 25,
+    "len_mean": 4.51,
+    "len_distribution": {
+      "5": 9751,
+      "4": 5303,
+      "6": 5051,
+      "3": 3566,
+      "2": 3254,
+      "7": 1488,
+      "0": 778,
+      "8": 521,
+      "10": 100,
+      "11": 56
+    }
+  },
+  "product_details": {
+    "records_with_any": 30000,
+    "count_min": 1,
+    "count_max": 25,
+    "count_mean": 13.44,
+    "keys_profile": {
+      "Fabric": {
+        "records_with_key": 27804,
+        "distinct_values": 244,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 56
+      },
+      "Style Code": {
+        "records_with_key": 27568,
+        "distinct_values": 23246,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 156
+      },
+      "Pattern": {
+        "records_with_key": 27507,
+        "distinct_values": 118,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 37
+      },
+      "Fabric Care": {
+        "records_with_key": 23500,
+        "distinct_values": 472,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 197
+      },
+      "Suitable For": {
+        "records_with_key": 20733,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 11,
+        "value_len_max": 14
+      },
+      "Sleeve": {
+        "records_with_key": 20411,
+        "distinct_values": 20,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 91
+      },
+      "Pack of": {
+        "records_with_key": 19417,
+        "distinct_values": 13,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 9
+      },
+      "Type": {
+        "records_with_key": 18826,
+        "distinct_values": 153,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 140
+      },
+      "Ideal For": {
+        "records_with_key": 18489,
+        "distinct_values": 6,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 23
+      },
+      "Fit": {
+        "records_with_key": 18141,
+        "distinct_values": 45,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 33
+      },
+      "Reversible": {
+        "records_with_key": 15726,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 3
+      },
+      "Color": {
+        "records_with_key": 14889,
+        "distinct_values": 352,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 45
+      },
+      "Brand Color": {
+        "records_with_key": 14029,
+        "distinct_values": 2147,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 87
+      },
+      "Sales Package": {
+        "records_with_key": 13663,
+        "distinct_values": 614,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 310
+      },
+      "Size": {
+        "records_with_key": 13420,
+        "distinct_values": 16,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 11
+      },
+      "Neck Type": {
+        "records_with_key": 13409,
+        "distinct_values": 23,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 20
+      },
+      "Generic Name": {
+        "records_with_key": 12991,
+        "distinct_values": 36,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 13
+      },
+      "Country of Origin": {
+        "records_with_key": 12351,
+        "distinct_values": 11,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 11
+      },
+      "Brand Fit": {
+        "records_with_key": 8183,
+        "distinct_values": 51,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 59
+      },
+      "Sleeve Type": {
+        "records_with_key": 6786,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 6
+      },
+      "Model Name": {
+        "records_with_key": 5664,
+        "distinct_values": 2586,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 199
+      },
+      "Other Details": {
+        "records_with_key": 5499,
+        "distinct_values": 1001,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 968
+      },
+      "Occasion": {
+        "records_with_key": 4654,
+        "distinct_values": 41,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 80
+      },
+      "Closure": {
+        "records_with_key": 4550,
+        "distinct_values": 57,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 48
+      },
+      "Secondary Color": {
+        "records_with_key": 3385,
+        "distinct_values": 62,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 30
+      },
+      "Neck": {
+        "records_with_key": 3083,
+        "distinct_values": 26,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 21
+      },
+      "Hooded": {
+        "records_with_key": 2029,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 3
+      },
+      "Collar": {
+        "records_with_key": 2027,
+        "distinct_values": 18,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 15
+      },
+      "Number of Contents in Sales Package": {
+        "records_with_key": 1858,
+        "distinct_values": 17,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 10
+      },
+      "Pockets": {
+        "records_with_key": 1778,
+        "distinct_values": 112,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 87
+      },
+      "Rise": {
+        "records_with_key": 1446,
+        "distinct_values": 6,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 9
+      },
+      "Hem": {
+        "records_with_key": 1207,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 10
+      },
+      "Domestic Warranty": {
+        "records_with_key": 946,
+        "distinct_values": 10,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 8
+      },
+      "Pack Of": {
+        "records_with_key": 923,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 1
+      },
+      "Faded": {
+        "records_with_key": 906,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 10,
+        "value_len_max": 10
+      },
+      "Distressed": {
+        "records_with_key": 906,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 9,
+        "value_len_max": 13
+      },
+      " ": {
+        "records_with_key": 894,
+        "distinct_values": 184,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 204
+      },
+      "Sole Material": {
+        "records_with_key": 862,
+        "distinct_values": 34,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 57
+      },
+      "Fly": {
+        "records_with_key": 860,
+        "distinct_values": 21,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 53
+      },
+      "Length Type": {
+        "records_with_key": 572,
+        "distinct_values": 8,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 11
+      },
+      "Bottom Length": {
+        "records_with_key": 535,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 5
+      },
+      "Dupatta Length": {
+        "records_with_key": 535,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 3
+      },
+      "Top Length": {
+        "records_with_key": 535,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 6
+      },
+      "Stitching Type": {
+        "records_with_key": 535,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 10,
+        "value_len_max": 10
+      },
+      "Care instructions": {
+        "records_with_key": 530,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 105,
+        "value_len_max": 163
+      },
+      "Pleats": {
+        "records_with_key": 519,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 11
+      },
+      "Character": {
+        "records_with_key": 487,
+        "distinct_values": 48,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 50
+      },
+      "Waistband": {
+        "records_with_key": 445,
+        "distinct_values": 8,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 30
+      },
+      "Outer Material": {
+        "records_with_key": 420,
+        "distinct_values": 26,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 43
+      },
+      "Belt Loops": {
+        "records_with_key": 417,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 3
+      },
+      "Series": {
+        "records_with_key": 402,
+        "distinct_values": 101,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 95
+      },
+      "Pocket Type": {
+        "records_with_key": 371,
+        "distinct_values": 14,
+        "exact": true,
+        "value_len_min": 11,
+        "value_len_max": 40
+      },
+      "Fabric Details": {
+        "records_with_key": 368,
+        "distinct_values": 31,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 105
+      },
+      "Package contains": {
+        "records_with_key": 364,
+        "distinct_values": 19,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 37
+      },
+      "": {
+        "records_with_key": 319,
+        "distinct_values": 67,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 118
+      },
+      "Other Dimensions": {
+        "records_with_key": 304,
+        "distinct_values": 92,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 540
+      },
+      "Alteration Required": {
+        "records_with_key": 265,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 3
+      },
+      "Warranty Service Type": {
+        "records_with_key": 263,
+        "distinct_values": 10,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 34
+      },
+      "Not Covered in Warranty": {
+        "records_with_key": 262,
+        "distinct_values": 14,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 77
+      },
+      "Covered in Warranty": {
+        "records_with_key": 260,
+        "distinct_values": 10,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 39
+      },
+      "Warranty Summary": {
+        "records_with_key": 248,
+        "distinct_values": 20,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 111
+      },
+      "Inseam Length": {
+        "records_with_key": 241,
+        "distinct_values": 16,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 10
+      },
+      "Stretchable": {
+        "records_with_key": 215,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 3
+      },
+      "Weight": {
+        "records_with_key": 210,
+        "distinct_values": 21,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 77
+      },
+      "Other Features": {
+        "records_with_key": 181,
+        "distinct_values": 17,
+        "exact": true,
+        "value_len_min": 11,
+        "value_len_max": 906
+      },
+      "Care Instructions": {
+        "records_with_key": 169,
+        "distinct_values": 20,
+        "exact": true,
+        "value_len_min": 38,
+        "value_len_max": 303
+      },
+      "Bottom Fabric": {
+        "records_with_key": 161,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 9
+      },
+      "Waist in inch": {
+        "records_with_key": 157,
+        "distinct_values": 14,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 21
+      },
+      "Top Fabric": {
+        "records_with_key": 155,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 12
+      },
+      "Top Type": {
+        "records_with_key": 130,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 17
+      },
+      "Bottom Type": {
+        "records_with_key": 119,
+        "distinct_values": 6,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 10
+      },
+      "Knit Type": {
+        "records_with_key": 114,
+        "distinct_values": 16,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 30
+      },
+      "International Warranty": {
+        "records_with_key": 112,
+        "distinct_values": 8,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 8
+      },
+      "Style": {
+        "records_with_key": 98,
+        "distinct_values": 19,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 129
+      },
+      "Rise in inch": {
+        "records_with_key": 73,
+        "distinct_values": 13,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 9
+      },
+      "Hip in inch": {
+        "records_with_key": 73,
+        "distinct_values": 16,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 21
+      },
+      "Upper Pattern": {
+        "records_with_key": 73,
+        "distinct_values": 15,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 22
+      },
+      "School Shoe": {
+        "records_with_key": 72,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 2
+      },
+      "Inside Leg in inch": {
+        "records_with_key": 70,
+        "distinct_values": 14,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 21
+      },
+      "Model Number": {
+        "records_with_key": 65,
+        "distinct_values": 65,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 31
+      },
+      "Lining": {
+        "records_with_key": 55,
+        "distinct_values": 14,
+        "exact": true,
+        "value_len_min": 1,
+        "value_len_max": 24
+      },
+      "Inner Material": {
+        "records_with_key": 31,
+        "distinct_values": 12,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 68
+      },
+      "Thigh in inch": {
+        "records_with_key": 28,
+        "distinct_values": 10,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 9
+      },
+      "Clasp Material": {
+        "records_with_key": 25,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 7
+      },
+      "Lining Material": {
+        "records_with_key": 25,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 13
+      },
+      "Strap Material": {
+        "records_with_key": 24,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 3
+      },
+      "Top Closure": {
+        "records_with_key": 20,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 3,
+        "value_len_max": 6
+      },
+      "Clasp Type": {
+        "records_with_key": 19,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 12
+      },
+      "Minimum Age": {
+        "records_with_key": 19,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 8,
+        "value_len_max": 9
+      },
+      "Maximum Age": {
+        "records_with_key": 19,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 8,
+        "value_len_max": 9
+      },
+      "Length in inch": {
+        "records_with_key": 18,
+        "distinct_values": 6,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 9
+      },
+      "Weave Type": {
+        "records_with_key": 16,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 5
+      },
+      "Cuff": {
+        "records_with_key": 15,
+        "distinct_values": 7,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 20
+      },
+      "Width in inch": {
+        "records_with_key": 15,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 8
+      },
+      "Season": {
+        "records_with_key": 14,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 6
+      },
+      "Fastener": {
+        "records_with_key": 12,
+        "distinct_values": 7,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 24
+      },
+      "Technology Used": {
+        "records_with_key": 11,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 61
+      },
+      "Type for Flats": {
+        "records_with_key": 11,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 6,
+        "value_len_max": 7
+      },
+      "Tip Shape": {
+        "records_with_key": 10,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 5
+      },
+      "Tanning Process": {
+        "records_with_key": 10,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 9,
+        "value_len_max": 9
+      },
+      "Heel Pattern": {
+        "records_with_key": 9,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 11
+      },
+      "Leather Type": {
+        "records_with_key": 9,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 9
+      },
+      "Shoe Length": {
+        "records_with_key": 9,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 2
+      },
+      "Animal Source": {
+        "records_with_key": 9,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 10,
+        "value_len_max": 10
+      },
+      "Material": {
+        "records_with_key": 9,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 20
+      },
+      "Model Details": {
+        "records_with_key": 6,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 67,
+        "value_len_max": 69
+      },
+      "Vents": {
+        "records_with_key": 6,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 20,
+        "value_len_max": 20
+      },
+      "Height": {
+        "records_with_key": 5,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 8
+      },
+      "Brand": {
+        "records_with_key": 5,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 8
+      },
+      "Shade": {
+        "records_with_key": 5,
+        "distinct_values": 5,
+        "exact": true,
+        "value_len_min": 4,
+        "value_len_max": 11
+      },
+      "Length": {
+        "records_with_key": 5,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 5
+      },
+      "Width": {
+        "records_with_key": 4,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 5
+      },
+      "Width at Base": {
+        "records_with_key": 4,
+        "distinct_values": 4,
+        "exact": true,
+        "value_len_min": 8,
+        "value_len_max": 12
+      },
+      "Bust in inch": {
+        "records_with_key": 4,
+        "distinct_values": 3,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 7
+      },
+      "Thumb Hole": {
+        "records_with_key": 4,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 2
+      },
+      "Coat Type": {
+        "records_with_key": 4,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 15,
+        "value_len_max": 15
+      },
+      "Region": {
+        "records_with_key": 3,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 8
+      },
+      "Placket": {
+        "records_with_key": 2,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 24,
+        "value_len_max": 24
+      },
+      "Design": {
+        "records_with_key": 2,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 11,
+        "value_len_max": 67
+      },
+      "Pleated": {
+        "records_with_key": 2,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 2
+      },
+      "Shoulder in inch": {
+        "records_with_key": 2,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 9
+      },
+      "Sleeve in inch": {
+        "records_with_key": 2,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 7,
+        "value_len_max": 9
+      },
+      "Weave type": {
+        "records_with_key": 2,
+        "distinct_values": 2,
+        "exact": true,
+        "value_len_min": 10,
+        "value_len_max": 27
+      },
+      "Depth": {
+        "records_with_key": 1,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 5,
+        "value_len_max": 5
+      },
+      "Speciality Footwear": {
+        "records_with_key": 1,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 14,
+        "value_len_max": 14
+      },
+      "Foot Coverage": {
+        "records_with_key": 1,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 2,
+        "value_len_max": 2
+      },
+      "Fabric care": {
+        "records_with_key": 1,
+        "distinct_values": 1,
+        "exact": true,
+        "value_len_min": 9,
+        "value_len_max": 9
+      }
+    }
+  },
+  "numeric": {
+    "actual_price": {
+      "count": 30000,
+      "valid": 29137,
+      "min": 150.0,
+      "max": 12999.0,
+      "mean": 1472.62,
+      "median": 1249.0,
+      "stdev": 963.26,
+      "p1": 374.0,
+      "p99": 4999.0
+    },
+    "selling_price": {
+      "count": 30000,
+      "valid": 29998,
+      "min": 99.0,
+      "max": 7999.0,
+      "mean": 716.56,
+      "median": 549.0,
+      "stdev": 572.44,
+      "p1": 199.0,
+      "p99": 3039.0
+    },
+    "average_rating": {
+      "count": 30000,
+      "valid": 27554,
+      "min": 1.0,
+      "max": 5.0,
+      "mean": 3.64,
+      "median": 3.8,
+      "stdev": 0.66,
+      "p1": 1.7,
+      "p99": 5.0
+    },
+    "rating_invalid": {
+      "unparseable": 2446
+    },
+    "discount_pct": {
+      "count": 29059,
+      "valid": 29059,
+      "min": 1,
+      "max": 87,
+      "mean": 50.34,
+      "median": 53,
+      "stdev": 16.82,
+      "p1": 7,
+      "p99": 79
+    },
+    "discount_invalid": {
+      "malformed": 941
+    }
+  },
+  "discount_consistency": {
+    "consistent": 1322,
+    "mismatch": 26875,
+    "unverifiable": 1803,
+    "zero_or_negative_selling": 0
+  },
+  "discount_mismatch_examples": [
+    {
+      "actual": 2999.0,
+      "selling": 921.0,
+      "pct": 69,
+      "expected": 929.69
+    },
+    {
+      "actual": 1499.0,
+      "selling": 499.0,
+      "pct": 66,
+      "expected": 509.66
+    },
+    {
+      "actual": 2999.0,
+      "selling": 931.0,
+      "pct": 68,
+      "expected": 959.68
+    },
+    {
+      "actual": 2999.0,
+      "selling": 911.0,
+      "pct": 69,
+      "expected": 929.69
+    },
+    {
+      "actual": 2999.0,
+      "selling": 943.0,
+      "pct": 68,
+      "expected": 959.68
+    }
+  ],
+  "out_of_stock": {
+    "False": 28258,
+    "True": 1742
+  },
+  "crawled_at": {
+    "parseable": 30000,
+    "not_parseable": 0,
+    "sample_invalid": [],
+    "by_year_month": {
+      "2021-10": 20913,
+      "2021-11": 9087
+    }
+  },
+  "categorical": {
+    "category": {
+      "Clothing and Accessories": 28971,
+      "Footwear": 987,
+      "Bags, Wallets & Belts": 41,
+      "Toys": 1
+    },
+    "sub_category": {
+      "Topwear": 16575,
+      "Bottomwear": 3862,
+      "Winter Wear": 2753,
+      "Innerwear and Swimwear": 1774,
+      "Clothing Accessories": 1760,
+      "Kurtas, Ethnic Sets and Bottoms": 1248,
+      "Men's Footwear": 987,
+      "Fabrics": 535,
+      "Blazers, Waistcoats and Suits": 136,
+      "Sleepwear": 122,
+      "Tracksuits": 90,
+      "Raincoats": 34,
+      "Uber Urban Clothing and Accessories": 28,
+      "Inspire Clothing and Accessories": 23,
+      "Sunshopping Bags, Wallets & Belts": 21,
+      "Crocks Club Clothing and Accessories": 15,
+      "Roy Clothing and Accessories": 12,
+      "SUNSHOPPING Bags, Wallets & Belts": 10,
+      "INSPIRE Clothing and Accessories": 4,
+      "Winsome Deal Bags, Wallets & Belts": 4,
+      "YOFAMA Bags, Wallets & Belts": 4,
+      "Party Supplies": 1,
+      "Brand Trunk Bags, Wallets & Belts": 1,
+      "mentiezi Bags, Wallets & Belts": 1
+    },
+    "brand": {
+      "ARBO": 999,
+      "REEB": 996,
+      "True Bl": 996,
+      "Pu": 996,
+      "ECKO Unl": 993,
+      "Free Authori": 864,
+      "Keo": 668,
+      "Amp": 621,
+      "Black Beat": 560,
+      "PixF": 528,
+      "yellowvib": 507,
+      "vims rai": 504,
+      "Marca Disa": 444,
+      "Oka": 419,
+      "Gracew": 405,
+      "TEE BUD": 398,
+      "Shoef": 358,
+      "V": 346,
+      "CupidSto": 338,
+      "Urban D": 324,
+      "Xi": 319,
+      "AXMA": 318,
+      "ATHL": 303,
+      "FLEXIM": 301,
+      "Dudli": 293,
+      "Cots": 291,
+      "TOM BU": 291,
+      "T10 Spor": 285,
+      "Lev": 279,
+      "Breakboun": 273,
+      "Mett": 273,
+      "M7 By Metrona": 267,
+      "Scott Internation": 267,
+      "Fairdea": 260,
+      "JACK AND HAR": 232,
+      "Vector": 231,
+      "chawla fashi": 229,
+      "Steenb": 225,
+      "A": 224,
+      "Uber Urb": 223,
+      "MASH UNLIMIT": 216,
+      "ATTIITU": 204,
+      "SATDEVANGIKHADIBHAND": 200,
+      "Bone": 196,
+      "HUMANITY ORIGINA": 196,
+      "Lucky Bi": 191,
+      "HUMBE": 190,
+      "Byford by Pantaloo": 179,
+      "Mo": 178,
+      "CA": 172
+    },
+    "seller": {
+      "RetailNet": 1615,
+      "ARBOR": 976,
+      "SandSMarketing": 927,
+      "BioworldMerchandising": 846,
+      "Keoti": 668,
+      "AFFGARMENTS": 623,
+      "Black Beatle": 560,
+      "ArvindTrueBlue": 528,
+      "AMALGUS ENTERPRISE": 492,
+      "Tayab Manch Fashions": 489,
+      "KAPSONSRETAILPVTLTD": 427,
+      "Marca Disati": 421,
+      "GRACEWAY": 408,
+      "T-SHIRT EXPRESS": 398,
+      "OKANE": 391,
+      "PixFab": 380,
+      "WHITE SKY": 372,
+      "SHOEFLY": 358,
+      "EVINCEMARKETERS": 334,
+      "ModaElementi": 333,
+      "CupidStoreIN": 329,
+      "MINATEE by Xink(Not Enough Ratin": 319,
+      "VRS FASHIONS PVT LTD": 310,
+      "Flexikaart": 307,
+      "ATHLIV": 299,
+      "DudlindFashion": 293,
+      "TOMBURG": 291,
+      "T10Sports": 283,
+      "switzinc": 249,
+      "InstaHeaven": 241,
+      "SKENTERPRISES21": 237,
+      "BrandFortunes": 223,
+      "UberUrban": 218,
+      "HIGHSTREET TRENDZ LLP": 215,
+      "BREAKBOUNCE": 209,
+      "Rakshita": 206,
+      "CHAWLA FASHION": 204,
+      "Satdevangi Khadi Bhandar": 198,
+      "HUMANITY ORIGINALS(New Sell": 196,
+      "STORM CYBER PUNK": 192,
+      "Manojsunda": 190,
+      "HUMBERT": 188,
+      "T T Limited": 180,
+      "KKSONS": 179,
+      "ARYACITION": 178,
+      "caratrend": 172,
+      "KrishnamEnterprisaes": 172,
+      "CANTABIL RETAIL": 165,
+      "METTLEAPPARELS": 162,
+      "LAFANTAR E-TAIL": 159
+    },
+    "category_cardinality": 4,
+    "sub_category_cardinality": 24,
+    "brand_cardinality": 324,
+    "seller_cardinality": 534,
+    "category_x_subcategory": {
+      "Bags, Wallets & Belts": {
+        "SUNSHOPPING Bags, Wallets & Belts": 10,
+        "Sunshopping Bags, Wallets & Belts": 21,
+        "Winsome Deal Bags, Wallets & Belts": 4,
+        "YOFAMA Bags, Wallets & Belts": 4,
+        "Brand Trunk Bags, Wallets & Belts": 1,
+        "mentiezi Bags, Wallets & Belts": 1
+      },
+      "Clothing and Accessories": {
+        "Bottomwear": 3862,
+        "Clothing Accessories": 1760,
+        "Winter Wear": 2753,
+        "Raincoats": 34,
+        "Topwear": 16575,
+        "Innerwear and Swimwear": 1774,
+        "Kurtas, Ethnic Sets and Bottoms": 1248,
+        "Blazers, Waistcoats and Suits": 136,
+        "Tracksuits": 90,
+        "Sleepwear": 122,
+        "Crocks Club Clothing and Accessories": 15,
+        "Fabrics": 535,
+        "Inspire Clothing and Accessories": 23,
+        "INSPIRE Clothing and Accessories": 4,
+        "Roy Clothing and Accessories": 12,
+        "Uber Urban Clothing and Accessories": 28
+      },
+      "Footwear": {
+        "Men's Footwear": 987
+      },
+      "Toys": {
+        "Party Supplies": 1
+      }
+    }
+  },
+  "samples": {
+    "_id": [
+      "fa8e22d6-c0b6-5229-bb9e-ad52eda39a0a",
+      "893e6980-f2a0-531f-b056-34dd63fe912c",
+      "eb4c8eab-8206-59d0-bcd1-a724d96bf74f",
+      "3f3f97bb-5faf-57df-a9ff-1af24e2b1045",
+      "750caa3d-6264-53ca-8ce1-94118a1d8951"
+    ],
+    "actual_price": [
+      "2,999",
+      "1,499",
+      "2,999",
+      "2,999",
+      "2,999"
+    ],
+    "average_rating": [
+      "3.9",
+      "3.9",
+      "3.9",
+      "3.9",
+      "3.9"
+    ],
+    "brand": [
+      "York",
+      "York",
+      "York",
+      "York",
+      "York"
+    ],
+    "category": [
+      "Clothing and Accessories",
+      "Clothing and Accessories",
+      "Clothing and Accessories",
+      "Clothing and Accessories",
+      "Clothing and Accessories"
+    ],
+    "crawled_at": [
+      "02/10/2021, 20:11:51",
+      "02/10/2021, 20:11:52",
+      "02/10/2021, 20:11:52",
+      "02/10/2021, 20:11:53",
+      "02/10/2021, 20:11:53"
+    ],
+    "description": [
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch"
+    ],
+    "discount": [
+      "69% off",
+      "66% off",
+      "68% off",
+      "69% off",
+      "68% off"
+    ],
+    "images": [
+      "['https://rukminim1.flixcart.com/image/128/128/jr3t5e80/track-pant/z/y/n/m-1005combo2-yorker-original-imafczg3xfh5qqd4.j",
+      "['https://rukminim1.flixcart.com/image/128/128/kfyasnk0/track-pant/g/5/y/s-19876-yorker-original-imafwamyzrwjynkf.jpeg?q",
+      "['https://rukminim1.flixcart.com/image/128/128/jr3t5e80/track-pant/e/c/s/xl-1005combo4-yorker-original-imafczgcc8t8uppk.",
+      "['https://rukminim1.flixcart.com/image/128/128/jr3t5e80/track-pant/w/e/f/xl-1005combo3-yorker-original-imafczezgq8ntn7c.",
+      "['https://rukminim1.flixcart.com/image/128/128/jr3t5e80/track-pant/d/w/b/l-1005combo1-yorker-original-imafczg3zcuajpgb.j"
+    ],
+    "out_of_stock": [
+      "False",
+      "False",
+      "False",
+      "False",
+      "False"
+    ],
+    "pid": [
+      "TKPFCZ9EA7H5FYZH",
+      "TKPFCZ9EJZV2UVRZ",
+      "TKPFCZ9EHFCY5Z4Y",
+      "TKPFCZ9ESZZ7YWEF",
+      "TKPFCZ9EVXKBSUD7"
+    ],
+    "product_details": [
+      "[{'Style Code': '1005COMBO2'}, {'Closure': 'Elastic'}, {'Pockets': 'Side Pockets'}, {'Fabric': 'Cotton Blend'}, {'Patter",
+      "[{'Style Code': '1005BLUE'}, {'Closure': 'Drawstring, Elastic'}, {'Pockets': 'Side Pockets'}, {'Fabric': 'Cotton Blend'}",
+      "[{'Style Code': '1005COMBO4'}, {'Closure': 'Elastic'}, {'Pockets': 'Side Pockets'}, {'Fabric': 'Cotton Blend'}, {'Patter",
+      "[{'Style Code': '1005COMBO3'}, {'Closure': 'Elastic'}, {'Pockets': 'Side Pockets'}, {'Fabric': 'Cotton Blend'}, {'Patter",
+      "[{'Style Code': '1005COMBO1'}, {'Closure': 'Drawstring, Elastic'}, {'Pockets': 'Side Pockets'}, {'Fabric': 'Cotton Blend"
+    ],
+    "seller": [
+      "Shyam Enterprises",
+      "Shyam Enterprises",
+      "Shyam Enterprises",
+      "Shyam Enterprises",
+      "Shyam Enterprises"
+    ],
+    "selling_price": [
+      "921",
+      "499",
+      "931",
+      "911",
+      "943"
+    ],
+    "sub_category": [
+      "Bottomwear",
+      "Bottomwear",
+      "Bottomwear",
+      "Bottomwear",
+      "Bottomwear"
+    ],
+    "title": [
+      "Solid Men Multicolor Track Pants",
+      "Solid Men Blue Track Pants",
+      "Solid Men Multicolor Track Pants",
+      "Solid Men Multicolor Track Pants",
+      "Solid Men Brown, Grey Track Pants"
+    ],
+    "url": [
+      "https://www.flipkart.com/yorker-solid-men-multicolor-track-pants/p/itmd2c76aadce459?pid=TKPFCZ9EA7H5FYZH&lid=LSTTKPFCZ9E",
+      "https://www.flipkart.com/yorker-solid-men-blue-track-pants/p/itmfczez7v6rzwer?pid=TKPFCZ9EJZV2UVRZ&lid=LSTTKPFCZ9EJZV2UV",
+      "https://www.flipkart.com/yorker-solid-men-multicolor-track-pants/p/itm1eee3ca648155?pid=TKPFCZ9EHFCY5Z4Y&lid=LSTTKPFCZ9E",
+      "https://www.flipkart.com/yorker-solid-men-multicolor-track-pants/p/itma2f9bfe7dafb7?pid=TKPFCZ9ESZZ7YWEF&lid=LSTTKPFCZ9E",
+      "https://www.flipkart.com/yorker-solid-men-brown-grey-track-pants/p/itm1a8387617b373?pid=TKPFCZ9EVXKBSUD7&lid=LSTTKPFCZ9E"
+    ]
+  },
+  "samples_text": {
+    "title": [
+      "Solid Men Multicolor Track Pants",
+      "Solid Men Blue Track Pants",
+      "Solid Men Multicolor Track Pants",
+      "Solid Men Multicolor Track Pants",
+      "Solid Men Brown, Grey Track Pants"
+    ],
+    "description": [
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch-free waistband & great for all year rou",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch-free waistband & great for all year rou",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch-free waistband & great for all year rou",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch-free waistband & great for all year rou",
+      "Yorker trackpants made from 100% rich combed cotton giving it a rich look.Designed for Comfort,Skin friendly fabric,itch-free waistband & great for all year rou"
+    ]
+  }
+}
