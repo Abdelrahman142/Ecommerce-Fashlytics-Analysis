@@ -1,0 +1,10 @@
+{
+ "product": "Fashlytics",
+ "currency": "INR",
+ "currency_symbol": "\u20b9",
+ "snapshot_start": "2021-10-02",
+ "snapshot_end": "2021-11-02",
+ "generated_at": "2026-08-11T17:18:02Z",
+ "source": "data/processed \u00b7 flipkart_fashion_products_dataset.json",
+ "data_layer": "mock-static (dev)"
+}

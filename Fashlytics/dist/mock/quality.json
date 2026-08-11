@@ -1,0 +1,266 @@
+{
+ "score": 96.3,
+ "score_formula": "weighted: PASS=1, WARN=0.75, INFO=1, FAIL=0",
+ "checks_total": 34,
+ "checks_by_status": {
+  "PASS": 24,
+  "WARN": 5,
+  "FAIL": 0,
+  "INFO": 5
+ },
+ "totals": {
+  "products": 28080,
+  "listings": 30000,
+  "attributes": 403277
+ },
+ "valid_records": 28080,
+ "invalid_records": 0,
+ "duplicate_records": 30493,
+ "missing_values": {
+  "description": 11150,
+  "primary_image": 772,
+  "avg_rating": 2260,
+  "brand": 2009,
+  "mrp": 777,
+  "selling_price": 2
+ },
+ "freshness": {
+  "snapshot_start": "2021-10-02",
+  "snapshot_end": "2021-11-02",
+  "generated_at": "2026-08-11T17:18:02Z"
+ },
+ "checks": [
+  {
+   "check_id": "N1",
+   "title": "Listings: no empty listing_id",
+   "category": "Nulls",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "All listing rows must carry a non-empty _id."
+  },
+  {
+   "check_id": "N2-product_id",
+   "title": "Products: no empty product_id",
+   "category": "Nulls",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "product_id is required on every product."
+  },
+  {
+   "check_id": "N2-title",
+   "title": "Products: no empty title",
+   "category": "Nulls",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "title is required on every product."
+  },
+  {
+   "check_id": "N4",
+   "title": "Products: listing_ids not empty",
+   "category": "Nulls",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Every product must map to >= 1 listing."
+  },
+  {
+   "check_id": "N5",
+   "title": "Attributes: attr_key not null",
+   "category": "Nulls",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Every EAV row must name an attribute key."
+  },
+  {
+   "check_id": "D1",
+   "title": "Listings sharing a product_id",
+   "category": "Duplicates",
+   "status": "WARN",
+   "records_affected": 1920,
+   "detail": "1,920 documented: the same product is listed under multiple catalog entries."
+  },
+  {
+   "check_id": "D2",
+   "title": "Products present in multiple listings",
+   "category": "Duplicates",
+   "status": "WARN",
+   "records_affected": 549,
+   "detail": "Documented (max 25 listings for one product)."
+  },
+  {
+   "check_id": "D3",
+   "title": "Products: product_id unique",
+   "category": "Duplicates",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Products layer must be 1 row per product."
+  },
+  {
+   "check_id": "D4",
+   "title": "Attributes: duplicate (product, key, value) triples",
+   "category": "Duplicates",
+   "status": "WARN",
+   "records_affected": 28573,
+   "detail": "Deduped at load time into the EAV table; artifact keeps raw rows."
+  },
+  {
+   "check_id": "P1",
+   "title": "No zero/negative selling_price",
+   "category": "Prices",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Selling price must be positive."
+  },
+  {
+   "check_id": "P2",
+   "title": "No zero/negative MRP",
+   "category": "Prices",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "MRP must be positive."
+  },
+  {
+   "check_id": "P3",
+   "title": "selling_price never exceeds MRP",
+   "category": "Prices",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Business sanity: price <= MRP."
+  },
+  {
+   "check_id": "P4",
+   "title": "price_band matches selling_price",
+   "category": "Prices",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Recomputed from PRICE_BANDS thresholds."
+  },
+  {
+   "check_id": "P5-discount_pct",
+   "title": "discount_pct within 0..100",
+   "category": "Prices",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Discount must be a percentage in [0, 100]."
+  },
+  {
+   "check_id": "P5-effective_discount_pct",
+   "title": "effective_discount_pct within 0..100",
+   "category": "Prices",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Discount must be a percentage in [0, 100]."
+  },
+  {
+   "check_id": "R1",
+   "title": "avg_rating within 0..5",
+   "category": "Ratings",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Ratings must be on the 0-5 scale."
+  },
+  {
+   "check_id": "R2",
+   "title": "has_rating consistent with avg_rating",
+   "category": "Ratings",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Flag and value must agree."
+  },
+  {
+   "check_id": "R3",
+   "title": "rating_bucket matches avg_rating",
+   "category": "Ratings",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Recomputed from RATING_BUCKETS thresholds."
+  },
+  {
+   "check_id": "C1",
+   "title": "category and sub_category not blank",
+   "category": "Categories",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Taxonomy fields are required."
+  },
+  {
+   "check_id": "C2",
+   "title": "No 'Unknown' taxonomy",
+   "category": "Categories",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Category cleaning never emits Unknown."
+  },
+  {
+   "check_id": "B1",
+   "title": "Products without a raw brand",
+   "category": "Brands",
+   "status": "WARN",
+   "records_affected": 2009,
+   "detail": "2,009 documented; mapped to Unknown brand (id 0)."
+  },
+  {
+   "check_id": "B2",
+   "title": "Raw brand present => canonical resolved",
+   "category": "Brands",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Every raw brand must resolve to a canonical value."
+  },
+  {
+   "check_id": "B3",
+   "title": "Blank canonical only when raw brand missing",
+   "category": "Brands",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Blank brand_canonical is allowed for the 2,009 no-brand products; DB maps them to Unknown brand id 0."
+  },
+  {
+   "check_id": "B4",
+   "title": "Brands still suspected of truncation",
+   "category": "Brands",
+   "status": "WARN",
+   "records_affected": 14156,
+   "detail": "Values >= 10 chars; kept because the seller vocabulary cannot corroborate a longer expansion."
+  },
+  {
+   "check_id": "I1",
+   "title": "product_id not blank",
+   "category": "IDs",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Primary key of the products layer."
+  },
+  {
+   "check_id": "I2",
+   "title": "listing_id values are well-formed UUIDs",
+   "category": "IDs",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "All listing ids match the UUID format."
+  },
+  {
+   "check_id": "I3",
+   "title": "listing_ids resolve to listings",
+   "category": "IDs",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Every product listing id must exist in the listings layer."
+  },
+  {
+   "check_id": "T1",
+   "title": "Column dtypes match the data contract",
+   "category": "Types",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "All 40+ columns conform to expected types."
+  },
+  {
+   "check_id": "T2",
+   "title": "listing_ids contains lists of strings",
+   "category": "Types",
+   "status": "PASS",
+   "records_affected": 0,
+   "detail": "Nested column must be an array of strings."
+  }
+ ]
+}
