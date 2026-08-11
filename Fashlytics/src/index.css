@@ -1,0 +1,170 @@
+@import "@fontsource-variable/inter";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  /* brand — deep iris/violet */
+  --color-brand-50: #f3f2fe;
+  --color-brand-100: #e9e7fd;
+  --color-brand-200: #d5d1fb;
+  --color-brand-300: #b8b0f6;
+  --color-brand-400: #9a88f0;
+  --color-brand-500: #7a66ea;
+  --color-brand-600: #6458e5;
+  --color-brand-700: #5142c8;
+  --color-brand-800: #4238a2;
+  --color-brand-900: #383280;
+  --color-brand-950: #221d4d;
+
+  /* surfaces */
+  --color-surface: #ffffff;
+  --color-surface-2: #f8f9fc;
+  --color-surface-3: #f1f3f8;
+  --color-edge: #e6e8f0;
+  --color-edge-2: #d8dbe7;
+  --color-ink: #10121a;
+  --color-ink-2: #4b5061;
+  --color-ink-3: #8a8fa3;
+
+  --color-surface-dark: #0d0e13;
+  --color-surface-2-dark: #14161d;
+  --color-surface-3-dark: #1c1f28;
+  --color-edge-dark: #262a35;
+  --color-edge-2-dark: #333947;
+  --color-ink-dark: #f2f3f7;
+  --color-ink-2-dark: #a3a8b8;
+  --color-ink-3-dark: #6b7080;
+
+  --shadow-card: 0 1px 2px rgba(16, 18, 26, 0.04), 0 8px 24px -12px rgba(16, 18, 26, 0.1);
+  --shadow-card-hover: 0 1px 2px rgba(16, 18, 26, 0.04), 0 16px 40px -16px rgba(16, 18, 26, 0.18);
+  --shadow-pop: 0 2px 4px rgba(16, 18, 26, 0.04), 0 20px 48px -12px rgba(16, 18, 26, 0.22);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-surface-2 text-ink dark:bg-surface-dark dark:text-ink-dark;
+    font-feature-settings: "cv11", "ss01";
+  }
+  * {
+    border-color: var(--color-edge);
+  }
+  .dark * {
+    border-color: var(--color-edge-dark);
+  }
+  ::selection {
+    background: var(--color-brand-500);
+    color: #fff;
+  }
+  /* tabular figures for numeric data */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+  /* scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-edge-2) transparent;
+  }
+  .dark * {
+    scrollbar-color: var(--color-edge-2-dark) transparent;
+  }
+  *::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-edge-2);
+    border-radius: 999px;
+  }
+  .dark *::-webkit-scrollbar-thumb {
+    background: var(--color-edge-2-dark);
+  }
+  /* recharts focus outline cleanup */
+  .recharts-wrapper:focus,
+  .recharts-surface:focus {
+    outline: none;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-edge bg-surface shadow-card dark:border-edge-dark dark:bg-surface-2-dark;
+  }
+  .input {
+    @apply h-9 rounded-lg border border-edge bg-surface-2 px-3 text-sm text-ink outline-none transition
+      placeholder:text-ink-3 hover:border-edge-2 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/25
+      dark:border-edge-dark dark:bg-surface-dark dark:text-ink-dark dark:placeholder:text-ink-3-dark
+      dark:hover:border-edge-2-dark dark:focus:border-brand-500;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600;
+  }
+  .btn-ghost {
+    @apply btn text-ink-2 hover:bg-surface-3 hover:text-ink dark:text-ink-2-dark
+      dark:hover:bg-surface-3-dark dark:hover:text-ink-dark;
+  }
+  .btn-outline {
+    @apply btn border border-edge bg-surface text-ink-2 hover:border-edge-2 hover:text-ink
+      dark:border-edge-dark dark:bg-transparent dark:text-ink-2-dark
+      dark:hover:border-edge-2-dark dark:hover:text-ink-dark;
+  }
+  .label {
+    @apply text-[11px] font-medium tracking-wide text-ink-3 uppercase dark:text-ink-3-dark;
+  }
+  .page-header {
+    @apply mb-6 flex flex-col gap-1.5;
+  }
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight text-ink dark:text-ink-dark;
+  }
+  .page-subtitle {
+    @apply text-sm text-ink-2 dark:text-ink-2-dark;
+  }
+}
+
+@utility btn {
+  @apply inline-flex h-9 items-center justify-center gap-2 rounded-lg px-3.5 text-sm font-medium
+    transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.25s ease-out both;
+  }
+  .animate-rise {
+    animation: rise 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
