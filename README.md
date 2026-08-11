@@ -76,7 +76,23 @@ Full design rationale lives in `docs/architecture.md`.
 ## Screenshots
 <img width="1280" height="831" alt="image" src="https://github.com/user-attachments/assets/1202c332-a3b6-4d36-ab2d-9dcbe95c01af" />
 
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/cabdd8b0-e108-4461-8656-61b41e4992d3" />
 
+<img width="996" height="379" alt="image" src="https://github.com/user-attachments/assets/25190aef-918a-4ce8-bb6a-29a9b177027f" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/9f819ce9-a337-4abc-8ee3-dc68e2ec43fd" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/14773f9b-5e3f-4736-bce5-f7a89beea014" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/a03bfa2f-5e8f-4a03-b7bd-10b8881703ca" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/4b9587cc-1c37-4844-bf2d-bc40ae3f43d7" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/2f95eae6-ab03-4b42-8a0b-3629b6b58b43" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/55b73058-7d06-4106-b90e-e40134c5d572" />
+
+<img width="1280" height="835" alt="image" src="https://github.com/user-attachments/assets/6a67aeef-e96a-476b-96a6-0868bfc79816" />
 
 
 ## Data Pipeline
